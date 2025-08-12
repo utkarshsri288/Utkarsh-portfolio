@@ -6,12 +6,9 @@ import {
   Card, 
   CardContent,
   TextField,
-
   LinearProgress,
   Chip,
   Avatar,
-  AppBar,
-  Toolbar,
   Fab
 } from '@mui/material';
 import { 
@@ -32,6 +29,7 @@ import {
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import CustomGrid from '../components/CustomGrid';
+import Navbar from '../components/Navbar';
 
 const Landing = () => {
   const [formData, setFormData] = useState({
@@ -62,67 +60,8 @@ const Landing = () => {
 
   return (
     <Box>
-      {/* Floating Navigation */}
-      <AppBar 
-        position="fixed" 
-        sx={{ 
-          backgroundColor: 'rgba(26, 26, 26, 0.95)', 
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.3)'
-        }}
-      >
-        <Toolbar>
-          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-            <Box
-              sx={{
-                width: 45,
-                height: 45,
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                border: '2px solid rgba(255,255,255,0.3)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-              }}
-            >
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 800,
-                  fontSize: '1.2rem',
-                  color: 'white',
-                  textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-                  letterSpacing: '-1px',
-                  lineHeight: 1
-                }}
-              >
-                Uc
-              </Typography>
-            </Box>
-          </Box>
-          <Box sx={{ display: 'flex', gap: 1 }}>
-            <Button color="primary" onClick={() => scrollToSection('home')}>
-              Home
-            </Button>
-            <Button color="primary" onClick={() => scrollToSection('about')}>
-              About
-            </Button>
-            <Button color="primary" onClick={() => scrollToSection('experience')}>
-              Experience
-            </Button>
-            <Button color="primary" onClick={() => scrollToSection('skills')}>
-              Skills
-            </Button>
-            <Button color="primary" onClick={() => scrollToSection('projects')}>
-              Projects
-            </Button>
-            <Button color="primary" onClick={() => scrollToSection('contact')}>
-              Contact
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
+      {/* Responsive Navigation */}
+      <Navbar scrollToSection={scrollToSection} />
 
       {/* Hero Section */}
       <Box id="home" sx={{ pt: 8 }}>
