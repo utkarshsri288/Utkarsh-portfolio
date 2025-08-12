@@ -97,7 +97,7 @@ const Landing = () => {
                   lineHeight: 1
                 }}
               >
-                US
+                Uc
               </Typography>
             </Box>
           </Box>
