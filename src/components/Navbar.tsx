@@ -50,32 +50,59 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
   const drawer = (
     <Box sx={{ width: 250, pt: 2 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 2 }}>
-        <Box
-          sx={{
-            width: 40,
-            height: 40,
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            border: '2px solid rgba(255,255,255,0.3)',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-          }}
-        >
-          <Typography
-            variant="h6"
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box
             sx={{
-              fontWeight: 800,
-              fontSize: '1rem',
-              color: 'white',
-              textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-              letterSpacing: '-1px',
-              lineHeight: 1
+              width: 40,
+              height: 40,
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              border: '2px solid rgba(255,255,255,0.3)',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+              mr: 2
             }}
           >
-            US
-          </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 800,
+                fontSize: '1rem',
+                color: 'white',
+                textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                letterSpacing: '-1px',
+                lineHeight: 1
+              }}
+            >
+              US
+            </Typography>
+          </Box>
+          <Box>
+            <Typography
+              variant="body1"
+              sx={{
+                fontWeight: 600,
+                color: 'white',
+                fontSize: '0.9rem',
+                letterSpacing: '0.3px'
+              }}
+            >
+              UTKARSH SRIVASTAV
+            </Typography>
+            <Typography
+              variant="caption"
+              sx={{
+                color: 'rgba(255,255,255,0.8)',
+                fontSize: '0.7rem',
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase'
+              }}
+            >
+              Frontend Developer
+            </Typography>
+          </Box>
         </Box>
         <IconButton
           color="inherit"
@@ -138,7 +165,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+                boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                mr: 2
               }}
             >
               <Typography
@@ -152,7 +180,31 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
                   lineHeight: 1
                 }}
               >
-                Uc
+                US
+              </Typography>
+            </Box>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 700,
+                  color: 'white',
+                  fontSize: { sm: '1.1rem', md: '1.3rem' },
+                  letterSpacing: '0.5px'
+                }}
+              >
+                UTKARSH SRIVASTAV
+              </Typography>
+              <Typography
+                variant="caption"
+                sx={{
+                  color: 'rgba(255,255,255,0.8)',
+                  fontSize: '0.75rem',
+                  letterSpacing: '1px',
+                  textTransform: 'uppercase'
+                }}
+              >
+                Frontend Developer
               </Typography>
             </Box>
           </Box>
