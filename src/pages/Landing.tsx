@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Typography, 
   Box, 
   Button, 
   Card, 
   CardContent,
-  TextField,
   LinearProgress,
   Chip,
-  Avatar,
   Fab
 } from '@mui/material';
 import { 
@@ -17,9 +15,6 @@ import {
   LocationOn as LocationIcon,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
-  Send as SendIcon,
-  Person as PersonIcon,
-  Subject as SubjectIcon,
   Star as StarIcon,
   Code as CodeIcon,
   Web as WebIcon,
@@ -32,24 +27,6 @@ import CustomGrid from '../components/CustomGrid';
 import Navbar from '../components/Navbar';
 
 const Landing = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -178,7 +155,7 @@ const Landing = () => {
                   color: '#94a3b8'
                 }}
               >
-                Frontend Developer & UI/UX Designer
+                Freelance Frontend Developer & UI/UX Designer
               </Typography>
             </motion.div>
 
@@ -199,8 +176,8 @@ const Landing = () => {
                   color: '#cbd5e1'
                 }}
               >
-                Passionate about creating clean, responsive, and scalable web applications. 
-                Currently working as SDE I at IOPSHUB, specializing in React, TypeScript, and modern web technologies.
+                Available for freelance projects! I create clean, responsive, and scalable web applications. 
+                Specializing in React, TypeScript, and modern web technologies. Let's bring your ideas to life!
               </Typography>
             </motion.div>
 
@@ -232,7 +209,7 @@ const Landing = () => {
                   }}
                   onClick={() => scrollToSection('contact')}
                 >
-                  Get In Touch
+                  Hire Me Now
                 </Button>
                 <Button 
                   variant="outlined" 
@@ -404,6 +381,662 @@ const Landing = () => {
         </Box>
       </motion.div>
 
+      {/* Services Section */}
+      <Box id="services" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
+            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
+              Freelance Services
+            </Typography>
+            
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {/* First Row - 3 Cards */}
+              <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        borderRadius: 2, 
+                        p: 2, 
+                        mr: 2
+                      }}>
+                        <CodeIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        Frontend Development
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      Custom React applications, responsive websites, and interactive user interfaces built with modern technologies.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="React.js" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="TypeScript" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Material-UI" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        borderRadius: 2, 
+                        p: 2, 
+                        mr: 2
+                      }}>
+                        <BuildIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        UI/UX Design
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      User-centered design solutions, wireframes, prototypes, and design systems that enhance user experience.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="Figma" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Prototyping" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="User Research" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        borderRadius: 2, 
+                        p: 2, 
+                        mr: 2
+                      }}>
+                        <WebIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        Website Redesign
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      Modernize existing websites with responsive design, improved performance, and enhanced user experience.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="Responsive Design" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Performance" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="SEO" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+              </Box>
+
+              {/* Second Row - 2 Cards */}
+              <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        borderRadius: 2, 
+                        p: 2, 
+                        mr: 2
+                      }}>
+                        <StarIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        Consultation
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      Technical consultation for project planning, technology stack selection, and development strategy.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="Tech Stack" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Architecture" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Best Practices" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        borderRadius: 2, 
+                        p: 2, 
+                        mr: 2
+                      }}>
+                        <GitHubIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        Maintenance & Support
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      Ongoing maintenance, bug fixes, updates, and technical support for your web applications.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="Bug Fixes" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Updates" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Support" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+              </Box>
+            </Box>
+          </Box>
+        </motion.div>
+      </Box>
+
+      {/* Work Process Section */}
+      <Box id="process" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
+            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
+              How I Work
+            </Typography>
+            
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {/* Process Steps */}
+              <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 250px', maxWidth: '250px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    textAlign: 'center',
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ 
+                      width: 80, 
+                      height: 80, 
+                      borderRadius: '50%', 
+                      backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 3
+                    }}>
+                      <Typography variant="h3" sx={{ fontWeight: 800, color: '#667eea' }}>1</Typography>
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'white' }}>
+                      Discovery & Planning
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+                      We discuss your project requirements, goals, and timeline to create a detailed plan.
+                    </Typography>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 250px', maxWidth: '250px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    textAlign: 'center',
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ 
+                      width: 80, 
+                      height: 80, 
+                      borderRadius: '50%', 
+                      backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 3
+                    }}>
+                      <Typography variant="h3" sx={{ fontWeight: 800, color: '#667eea' }}>2</Typography>
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'white' }}>
+                      Design & Prototyping
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+                      I create wireframes, mockups, and interactive prototypes to visualize your project.
+                    </Typography>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 250px', maxWidth: '250px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    textAlign: 'center',
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ 
+                      width: 80, 
+                      height: 80, 
+                      borderRadius: '50%', 
+                      backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 3
+                    }}>
+                      <Typography variant="h3" sx={{ fontWeight: 800, color: '#667eea' }}>3</Typography>
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'white' }}>
+                      Development
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+                      Clean, responsive code development with regular updates and progress reports.
+                    </Typography>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 250px', maxWidth: '250px' }}
+                >
+                  <Card sx={{ 
+                    height: '100%', 
+                    p: 4, 
+                    textAlign: 'center',
+                    background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                    color: 'white',
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
+                    }
+                  }}>
+                    <Box sx={{ 
+                      width: 80, 
+                      height: 80, 
+                      borderRadius: '50%', 
+                      backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 3
+                    }}>
+                      <Typography variant="h3" sx={{ fontWeight: 800, color: '#667eea' }}>4</Typography>
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'white' }}>
+                      Testing & Launch
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+                      Thorough testing, optimization, and deployment with ongoing support and maintenance.
+                    </Typography>
+                  </Card>
+                </motion.div>
+              </Box>
+            </Box>
+          </Box>
+        </motion.div>
+      </Box>
+
+      {/* Pricing Section */}
+      <Box id="pricing" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
+            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
+              Pricing Packages
+            </Typography>
+            
+            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                style={{ flex: '0 1 350px', maxWidth: '350px' }}
+              >
+                <Card sx={{ 
+                  height: '100%', 
+                  p: 4, 
+                  background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                  color: 'white',
+                  border: '2px solid rgba(255,255,255,0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  '&:hover': {
+                    transform: 'translateY(-8px)',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                    border: '2px solid rgba(102, 126, 234, 0.5)'
+                  }
+                }}>
+                  <Typography variant="h4" sx={{ fontWeight: 700, textAlign: 'center', mb: 2, color: 'white' }}>
+                    Basic
+                  </Typography>
+                  <Typography variant="h3" sx={{ fontWeight: 800, textAlign: 'center', mb: 3, color: '#667eea' }}>
+                    $500
+                  </Typography>
+                  <Typography variant="body2" sx={{ textAlign: 'center', mb: 4, color: 'rgba(255,255,255,0.8)' }}>
+                    Perfect for small projects and startups
+                  </Typography>
+                  
+                  <Box sx={{ mb: 4 }}>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Up to 5 pages
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Responsive design
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Basic animations
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 2 revisions
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 1 week delivery
+                    </Typography>
+                  </Box>
+                  
+                  <Button 
+                    variant="outlined" 
+                    fullWidth 
+                    sx={{ 
+                      borderColor: 'rgba(255,255,255,0.3)', 
+                      color: 'white',
+                      py: 1.5,
+                      '&:hover': { 
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)'
+                      }
+                    }}
+                    onClick={() => scrollToSection('contact')}
+                  >
+                    Get Started
+                  </Button>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                style={{ flex: '0 1 350px', maxWidth: '350px' }}
+              >
+                <Card sx={{ 
+                  height: '100%', 
+                  p: 4, 
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', 
+                  color: 'white',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                  transform: 'scale(1.05)',
+                  transition: 'all 0.3s ease-in-out',
+                  '&:hover': {
+                    transform: 'scale(1.05) translateY(-8px)',
+                    boxShadow: '0 25px 50px rgba(102, 126, 234, 0.4)'
+                  }
+                }}>
+                  <Box sx={{ textAlign: 'center', mb: 2 }}>
+                    <Chip 
+                      label="Most Popular" 
+                      sx={{ 
+                        backgroundColor: 'rgba(255,255,255,0.2)', 
+                        color: 'white',
+                        fontWeight: 600,
+                        mb: 2
+                      }} 
+                    />
+                  </Box>
+                  <Typography variant="h4" sx={{ fontWeight: 700, textAlign: 'center', mb: 2, color: 'white' }}>
+                    Professional
+                  </Typography>
+                  <Typography variant="h3" sx={{ fontWeight: 800, textAlign: 'center', mb: 3, color: 'white' }}>
+                    $1,200
+                  </Typography>
+                  <Typography variant="body2" sx={{ textAlign: 'center', mb: 4, color: 'rgba(255,255,255,0.9)' }}>
+                    Ideal for growing businesses
+                  </Typography>
+                  
+                  <Box sx={{ mb: 4 }}>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Up to 10 pages
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Advanced animations
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ API integration
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 5 revisions
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 2 weeks delivery
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 1 month support
+                    </Typography>
+                  </Box>
+                  
+                  <Button 
+                    variant="contained" 
+                    fullWidth 
+                    sx={{ 
+                      backgroundColor: 'white',
+                      color: '#667eea',
+                      py: 1.5,
+                      fontWeight: 600,
+                      '&:hover': { 
+                        backgroundColor: 'rgba(255,255,255,0.9)',
+                        transform: 'translateY(-2px)'
+                      }
+                    }}
+                    onClick={() => scrollToSection('contact')}
+                  >
+                    Get Started
+                  </Button>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                style={{ flex: '0 1 350px', maxWidth: '350px' }}
+              >
+                <Card sx={{ 
+                  height: '100%', 
+                  p: 4, 
+                  background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', 
+                  color: 'white',
+                  border: '2px solid rgba(255,255,255,0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  '&:hover': {
+                    transform: 'translateY(-8px)',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                    border: '2px solid rgba(102, 126, 234, 0.5)'
+                  }
+                }}>
+                  <Typography variant="h4" sx={{ fontWeight: 700, textAlign: 'center', mb: 2, color: 'white' }}>
+                    Enterprise
+                  </Typography>
+                  <Typography variant="h3" sx={{ fontWeight: 800, textAlign: 'center', mb: 3, color: '#667eea' }}>
+                    Custom
+                  </Typography>
+                  <Typography variant="body2" sx={{ textAlign: 'center', mb: 4, color: 'rgba(255,255,255,0.8)' }}>
+                    For large-scale applications
+                  </Typography>
+                  
+                  <Box sx={{ mb: 4 }}>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Unlimited pages
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Custom features
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Database integration
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Unlimited revisions
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ Priority support
+                    </Typography>
+                    <Typography variant="body1" sx={{ mb: 2, color: 'white', display: 'flex', alignItems: 'center' }}>
+                      ✓ 3 months support
+                    </Typography>
+                  </Box>
+                  
+                  <Button 
+                    variant="outlined" 
+                    fullWidth 
+                    sx={{ 
+                      borderColor: 'rgba(255,255,255,0.3)', 
+                      color: 'white',
+                      py: 1.5,
+                      '&:hover': { 
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)'
+                      }
+                    }}
+                    onClick={() => scrollToSection('contact')}
+                  >
+                    Contact Me
+                  </Button>
+                </Card>
+              </motion.div>
+            </Box>
+          </Box>
+        </motion.div>
+      </Box>
+
       {/* About Section */}
       <Box id="about" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
@@ -435,17 +1068,18 @@ const Landing = () => {
                 Professional Summary
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
-                Frontend Developer with a strong focus on building clean, responsive, and scalable web applications. 
-                Currently working as an SDE I at IOPSHUB, where I design and develop enterprise-grade dashboards 
-                for the Syneriq SaaS platform using React, TypeScript, and Vite.
+                Freelance Frontend Developer with a strong focus on building clean, responsive, and scalable web applications. 
+                I specialize in React, TypeScript, and modern web technologies, helping businesses transform their digital presence 
+                with custom solutions that drive results.
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
-                Experienced in creating intuitive UI/UX designs with Figma, translating them into production-ready code. 
-                Previously led the design and development of the Syneriq.io website during a training program. 
-                Proficient in Git for version control and collaborative development.
+                With experience in both development and UI/UX design, I offer end-to-end solutions from concept to deployment. 
+                I've worked with startups and established companies, delivering projects that exceed expectations while maintaining 
+                clean, maintainable code and exceptional user experiences.
               </Typography>
               <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
-                Passionate about delivering user-centric solutions that drive performance and usability.
+                Available for new projects and ready to help you bring your ideas to life with professional, 
+                high-quality web applications.
               </Typography>
             </Card>
 
@@ -1054,6 +1688,13 @@ const Landing = () => {
                         </Box>
                         <LinearProgress variant="determinate" value={85} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
+                      <Box sx={{ mb: 2 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Cypress test cases</Typography>
+                          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>80%</Typography>
+                        </Box>
+                        <LinearProgress variant="determinate" value={80} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
+                      </Box>
                     </Box>
                   </Card>
                 </motion.div>
@@ -1326,6 +1967,7 @@ const Landing = () => {
         </motion.div>
       </Box>
 
+
       {/* Contact Section */}
       <Box id="contact" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
@@ -1335,12 +1977,41 @@ const Landing = () => {
           viewport={{ once: true }}
         >
           <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
-            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
-              Get In Touch
+            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 2, color: 'white' }}>
+              Ready to Start Your Project?
             </Typography>
-            <Box sx={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'stretch' }}>
+            <Typography variant="h6" sx={{ textAlign: 'center', mb: 6, color: '#94a3b8' }}>
+              I'm currently available for new projects. Let's discuss your requirements!
+            </Typography>
+            
+            {/* Availability Status */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 6 }}>
+              <Card sx={{ 
+                p: 3, 
+                backgroundColor: 'rgba(34, 197, 94, 0.1)', 
+                border: '1px solid rgba(34, 197, 94, 0.3)',
+                borderRadius: '20px'
+              }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box sx={{ 
+                    width: 12, 
+                    height: 12, 
+                    borderRadius: '50%', 
+                    backgroundColor: '#22c55e',
+                    animation: 'pulse 2s infinite'
+                  }} />
+                  <Typography variant="h6" sx={{ color: '#22c55e', fontWeight: 600 }}>
+                    Available for New Projects
+                  </Typography>
+                </Box>
+                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', mt: 1, textAlign: 'center' }}>
+                  Response time: Within 24 hours
+                </Typography>
+              </Card>
+            </Box>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               {/* Contact Information */}
-              <Box sx={{ flex: '0 1 400px' }}>
+              <Box sx={{ maxWidth: '600px', width: '100%' }}>
                 <Card sx={{ p: 4, height: '100%', backgroundColor: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
                   <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, mb: 4, color: 'white' }}>
                     Contact Information
@@ -1452,104 +2123,113 @@ const Landing = () => {
                 </Card>
               </Box>
 
-                            {/* Contact Form */}
-              <Box sx={{ flex: '1 1 500px' }}>
-                <Card sx={{ p: 4, backgroundColor: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, mb: 4, color: 'white' }}>
-                    Contact Form
-                  </Typography>
+            </Box>
+            
+            {/* Call to Action Buttons */}
+            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', mt: 6 }}>
+              <Button 
+                variant="contained" 
+                size="large" 
+                startIcon={<EmailIcon />}
+                sx={{ 
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  px: 6,
+                  py: 2,
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  borderRadius: '50px',
+                  boxShadow: '0 8px 25px rgba(102, 126, 234, 0.4)',
+                  '&:hover': { 
+                    background: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)',
+                    transform: 'translateY(-2px)',
+                    boxShadow: '0 12px 35px rgba(102, 126, 234, 0.6)'
+                  },
+                  transition: 'all 0.3s ease-in-out'
+                }}
+                onClick={() => {
+                  console.log('Email button clicked!'); // Debug log
+                  alert('Email button clicked! This confirms JavaScript is working.');
                   
-                  <form onSubmit={handleSubmit}>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                      <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                        <TextField
-                          fullWidth
-                          label="Your Name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          sx={{ flex: '1 1 200px' }}
-                          InputProps={{
-                            startAdornment: <PersonIcon sx={{ mr: 1, color: 'text.secondary' }} />
-                          }}
-                        />
-                        
-                        <TextField
-                          fullWidth
-                          label="Your Email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          sx={{ flex: '1 1 200px' }}
-                          InputProps={{
-                            startAdornment: <EmailIcon sx={{ mr: 1, color: 'text.secondary' }} />
-                          }}
-                        />
-                      </Box>
-                      
-                      <TextField
-                        fullWidth
-                        label="Subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        InputProps={{
-                          startAdornment: <SubjectIcon sx={{ mr: 1, color: 'text.secondary' }} />
-                        }}
-                      />
-                      
-                      <TextField
-                        fullWidth
-                        label="Message"
-                        name="message"
-                        multiline
-                        rows={6}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        placeholder="Tell me about your project or how I can help you..."
-                      />
-                      
-                      <Button
-                        type="submit"
-                        variant="contained"
-                        size="large"
-                        fullWidth
-                        startIcon={<SendIcon />}
-                        sx={{ 
-                          py: 2,
-                          px: 4,
-                          fontSize: '1.1rem',
-                          fontWeight: 600,
-                          borderRadius: '50px',
-                          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                          boxShadow: '0 8px 25px rgba(102, 126, 234, 0.4)',
-                          border: 'none',
-                          textTransform: 'none',
-                          letterSpacing: '0.5px',
-                          '&:hover': {
-                            background: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)',
-                            transform: 'translateY(-2px)',
-                            boxShadow: '0 12px 35px rgba(102, 126, 234, 0.6)',
-                            transition: 'all 0.3s ease-in-out'
-                          },
-                          '&:active': {
-                            transform: 'translateY(0px)',
-                            boxShadow: '0 6px 20px rgba(102, 126, 234, 0.5)'
-                          },
-                          transition: 'all 0.3s ease-in-out'
-                        }}
-                      >
-                        Send Message
-                      </Button>
-                    </Box>
-                  </form>
-                </Card>
-              </Box>
+                  // Simple and reliable approach
+                  const email = 'utkarshsri288@gmail.com';
+                  const subject = 'Freelance Project Inquiry';
+                  
+                  // Try to copy email to clipboard first
+                  if (navigator.clipboard) {
+                    navigator.clipboard.writeText(email).then(() => {
+                      alert(`Email copied to clipboard: ${email}\n\nPlease paste it in your email client and use subject: "${subject}"`);
+                    }).catch(() => {
+                      // Fallback if clipboard fails
+                      prompt('Copy this email address:', email);
+                    });
+                  } else {
+                    // Fallback for older browsers
+                    prompt('Copy this email address:', email);
+                  }
+                  
+                  // Also try to open mailto (but don't rely on it)
+                  try {
+                    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+                  } catch (e) {
+                    console.log('Mailto not supported');
+                  }
+                }}
+              >
+                Send Email
+              </Button>
+              <Button 
+                variant="outlined" 
+                size="large" 
+                startIcon={<PhoneIcon />}
+                sx={{ 
+                  borderColor: 'rgba(255,255,255,0.3)', 
+                  color: 'white',
+                  px: 6,
+                  py: 2,
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  borderRadius: '50px',
+                  borderWidth: '2px',
+                  backdropFilter: 'blur(10px)',
+                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  '&:hover': { 
+                    borderColor: 'white', 
+                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    transform: 'translateY(-2px)'
+                  },
+                  transition: 'all 0.3s ease-in-out'
+                }}
+                onClick={() => window.location.href = 'tel:+918009960930'}
+              >
+                Call Now
+              </Button>
+              <Button 
+                variant="outlined" 
+                size="large" 
+                startIcon={<LinkedInIcon />}
+                sx={{ 
+                  borderColor: 'rgba(255,255,255,0.3)', 
+                  color: 'white',
+                  px: 6,
+                  py: 2,
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  borderRadius: '50px',
+                  borderWidth: '2px',
+                  backdropFilter: 'blur(10px)',
+                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  '&:hover': { 
+                    borderColor: 'white', 
+                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    transform: 'translateY(-2px)'
+                  },
+                  transition: 'all 0.3s ease-in-out'
+                }}
+                onClick={() => window.open('https://linkedin.com/in/utkarshsri112/', '_blank')}
+              >
+                LinkedIn
+              </Button>
             </Box>
           </Box>
         </motion.div>

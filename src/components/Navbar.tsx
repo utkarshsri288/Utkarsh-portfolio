@@ -40,6 +40,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
 
   const navItems = [
     { label: 'Home', sectionId: 'home' },
+    { label: 'Services', sectionId: 'services' },
+    { label: 'Process', sectionId: 'process' },
+    { label: 'Pricing', sectionId: 'pricing' },
     { label: 'About', sectionId: 'about' },
     { label: 'Experience', sectionId: 'experience' },
     { label: 'Skills', sectionId: 'skills' },
