@@ -2148,32 +2148,26 @@ const Landing = () => {
                   transition: 'all 0.3s ease-in-out'
                 }}
                 onClick={() => {
-                  console.log('Email button clicked!'); // Debug log
-                  alert('Email button clicked! This confirms JavaScript is working.');
-                  
-                  // Simple and reliable approach
                   const email = 'utkarshsri288@gmail.com';
                   const subject = 'Freelance Project Inquiry';
                   
-                  // Try to copy email to clipboard first
-                  if (navigator.clipboard) {
-                    navigator.clipboard.writeText(email).then(() => {
-                      alert(`Email copied to clipboard: ${email}\n\nPlease paste it in your email client and use subject: "${subject}"`);
-                    }).catch(() => {
-                      // Fallback if clipboard fails
-                      prompt('Copy this email address:', email);
-                    });
-                  } else {
-                    // Fallback for older browsers
-                    prompt('Copy this email address:', email);
-                  }
-                  
-                  // Also try to open mailto (but don't rely on it)
+                  // Try to open email client first
                   try {
                     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
                   } catch (e) {
                     console.log('Mailto not supported');
                   }
+                  
+                  // Fallback: copy email to clipboard after a short delay
+                  setTimeout(() => {
+                    if (navigator.clipboard) {
+                      navigator.clipboard.writeText(email).then(() => {
+                        // Silent success - no alert needed
+                      }).catch(() => {
+                        // Silent fallback
+                      });
+                    }
+                  }, 500);
                 }}
               >
                 Send Email
