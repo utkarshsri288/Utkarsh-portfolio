@@ -838,7 +838,7 @@ const Landing = () => {
                     Basic
                   </Typography>
                   <Typography variant="h3" sx={{ fontWeight: 800, textAlign: 'center', mb: 3, color: '#667eea' }}>
-                    $500
+                    $200
                   </Typography>
                   <Typography variant="body2" sx={{ textAlign: 'center', mb: 4, color: 'rgba(255,255,255,0.8)' }}>
                     Perfect for small projects and startups
@@ -916,7 +916,7 @@ const Landing = () => {
                     Professional
                   </Typography>
                   <Typography variant="h3" sx={{ fontWeight: 800, textAlign: 'center', mb: 3, color: 'white' }}>
-                    $1,200
+                    $700
                   </Typography>
                   <Typography variant="body2" sx={{ textAlign: 'center', mb: 4, color: 'rgba(255,255,255,0.9)' }}>
                     Ideal for growing businesses
