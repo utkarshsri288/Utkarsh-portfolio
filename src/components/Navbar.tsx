@@ -25,7 +25,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -43,23 +43,23 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
     { label: 'Services', sectionId: 'services' },
     { label: 'Process', sectionId: 'process' },
     { label: 'About', sectionId: 'about' },
+    { label: 'Projects', sectionId: 'projects' },
     { label: 'Experience', sectionId: 'experience' },
     { label: 'Skills', sectionId: 'skills' },
-    { label: 'Projects', sectionId: 'projects' },
     { label: 'Contact', sectionId: 'contact' }
   ];
 
   const drawer = (
-    <Box sx={{ width: 250, pt: 2 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, mb: 2 }}>
+    <Box sx={{ width: 300, pt: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2.5, mb: 3 }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Box
             sx={{
               width: 40,
               height: 40,
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              border: '2px solid rgba(255,255,255,0.3)',
-              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #818cf8 0%, #22d3ee 100%)',
+              border: '1px solid rgba(255,255,255,0.35)',
+              borderRadius: '12px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -121,9 +121,12 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
             key={item.label} 
             onClick={() => handleNavClick(item.sectionId)}
             sx={{
+              mx: 1.5,
+              mb: 0.5,
+              borderRadius: 2.5,
               cursor: 'pointer',
               '&:hover': {
-                backgroundColor: 'rgba(255,255,255,0.1)',
+                backgroundColor: 'rgba(129,140,248,0.12)',
                 transition: 'background-color 0.3s ease'
               }
             }}
@@ -149,21 +152,22 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
       <AppBar 
         position="fixed" 
         sx={{ 
-          backgroundColor: 'rgba(26, 26, 26, 0.95)', 
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.3)',
+          backgroundColor: 'rgba(7, 11, 20, 0.78)', 
+          backdropFilter: 'blur(20px) saturate(160%)',
+          borderBottom: '1px solid rgba(148,163,184,0.12)',
+          boxShadow: '0 12px 40px rgba(0,0,0,0.18)',
           zIndex: theme.zIndex.drawer + 1
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{ width: '100%', maxWidth: 1440, mx: 'auto', minHeight: { xs: 68, md: 76 }, px: { xs: 2, sm: 3, lg: 5 } }}>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Box
               sx={{
                 width: 45,
                 height: 45,
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                border: '2px solid rgba(255,255,255,0.3)',
-                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #818cf8 0%, #22d3ee 100%)',
+                border: '1px solid rgba(255,255,255,0.35)',
+                borderRadius: '14px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -212,16 +216,21 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
           </Box>
           
           {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 0.25, alignItems: 'center' }}>
             {navItems.map((item) => (
               <Button 
                 key={item.label}
                 color="primary" 
                 onClick={() => handleNavClick(item.sectionId)}
                 sx={{
-                  color: 'white',
+                  color: '#cbd5e1',
+                  px: 1.25,
+                  py: 0.8,
+                  borderRadius: '10px',
+                  fontSize: '0.84rem',
                   '&:hover': {
-                    backgroundColor: 'rgba(255,255,255,0.1)',
+                    color: 'white',
+                    backgroundColor: 'rgba(129,140,248,0.12)',
                     transform: 'translateY(-1px)',
                     transition: 'all 0.3s ease'
                   }
@@ -239,7 +248,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ 
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: 'flex', lg: 'none' },
               color: 'white',
               '&:hover': {
                 backgroundColor: 'rgba(255,255,255,0.1)',
@@ -264,10 +273,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
           display: { xs: 'block', md: 'none' },
           '& .MuiDrawer-paper': { 
             boxSizing: 'border-box', 
-            width: 250,
-            backgroundColor: 'rgba(26, 26, 26, 0.98)',
-            backdropFilter: 'blur(10px)',
-            border: 'none'
+            width: 300,
+            backgroundColor: 'rgba(9, 14, 26, 0.98)',
+            backdropFilter: 'blur(20px)',
+            borderLeft: '1px solid rgba(148,163,184,0.14)'
           },
         }}
       >

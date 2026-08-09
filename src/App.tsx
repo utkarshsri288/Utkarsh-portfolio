@@ -8,50 +8,90 @@ import {
 } from '@mui/material';
 import Landing from './pages/Landing';
 
-// Create a custom dark theme
 const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#90caf9',
+      main: '#818cf8',
+      light: '#a5b4fc',
+      dark: '#6366f1',
     },
     secondary: {
-      main: '#f48fb1',
+      main: '#22d3ee',
     },
     background: {
-      default: '#0a0a0a',
-      paper: '#1a1a1a',
+      default: '#070b14',
+      paper: '#0f172a',
     },
     text: {
-      primary: '#ffffff',
-      secondary: '#b0b0b0',
+      primary: '#f8fafc',
+      secondary: '#94a3b8',
     },
   },
+  shape: {
+    borderRadius: 18,
+  },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Manrope", "Helvetica", "Arial", sans-serif',
     h1: {
+      fontFamily: '"Space Grotesk", "Manrope", sans-serif',
       fontWeight: 700,
+      letterSpacing: '-0.045em',
     },
     h2: {
-      fontWeight: 600,
+      fontFamily: '"Space Grotesk", "Manrope", sans-serif',
+      fontWeight: 700,
+      letterSpacing: '-0.035em',
     },
     h3: {
-      fontWeight: 600,
+      fontFamily: '"Space Grotesk", "Manrope", sans-serif',
+      fontWeight: 700,
+      letterSpacing: '-0.03em',
+    },
+    h4: {
+      fontFamily: '"Space Grotesk", "Manrope", sans-serif',
+      fontWeight: 700,
+    },
+    h5: {
+      fontFamily: '"Space Grotesk", "Manrope", sans-serif',
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: '#070b14',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           textTransform: 'none',
-          borderRadius: 8,
+          borderRadius: 12,
+          fontWeight: 700,
+          letterSpacing: '-0.01em',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none',
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontWeight: 600,
         },
       },
     },
     MuiAppBar: {
       styleOverrides: {
         root: {
-          boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+          backgroundImage: 'none',
         },
       },
     },
@@ -62,13 +102,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-                   <Router>
-               <Box sx={{ flexGrow: 1 }}>
-                 <Routes>
-                   <Route path="*" element={<Landing />} />
-                 </Routes>
-               </Box>
-             </Router>
+      <Router>
+        <Box sx={{ flexGrow: 1 }}>
+          <Routes>
+            <Route path="*" element={<Landing />} />
+          </Routes>
+        </Box>
+      </Router>
     </ThemeProvider>
   );
 }

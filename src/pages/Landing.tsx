@@ -37,18 +37,18 @@ const Landing = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Box className="portfolio-shell" sx={{ display: 'flex', flexDirection: 'column' }}>
       {/* Responsive Navigation */}
       <Navbar scrollToSection={scrollToSection} />
 
       {/* Hero Section */}
-      <Box id="home" sx={{ pt: 8 }}>
+      <Box id="home" className="hero-section" sx={{ pt: 8 }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Box 
+          <Box className="hero-stage"
             sx={{ 
               textAlign: 'center', 
               py: 16,
@@ -64,7 +64,7 @@ const Landing = () => {
             }}
           >
             {/* Animated Background Elements */}
-            <Box sx={{
+            <Box className="hero-aurora" sx={{
               position: 'absolute',
               top: 0,
               left: 0,
@@ -79,7 +79,7 @@ const Landing = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-                            <Box
+              <Box className="hero-monogram"
                 sx={{
                   width: 180,
                   height: 180,
@@ -122,6 +122,7 @@ const Landing = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Typography 
+                className="hero-name"
                 variant="h1" 
                 component="h1" 
                 gutterBottom 
@@ -251,7 +252,7 @@ const Landing = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <Box sx={{ py: 4, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+        <Box className="stats-section" sx={{ py: 4, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
           <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
             <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 4, color: 'white' }}>
               Quick Stats
@@ -383,7 +384,7 @@ const Landing = () => {
       </motion.div>
 
       {/* Services Section */}
-      <Box id="services" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="services" className="content-section" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -647,7 +648,7 @@ const Landing = () => {
       </Box>
 
       {/* Work Process Section */}
-      <Box id="process" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="process" className="content-section" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1070,7 +1071,7 @@ const Landing = () => {
       </Box>
 
       {/* About Section */}
-      <Box id="about" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="about" className="content-section" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1269,7 +1270,7 @@ const Landing = () => {
       </Box>
 
       {/* Experience Section */}
-      <Box id="experience" sx={{ order: 4, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="experience" className="content-section" sx={{ order: 4, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1454,7 +1455,7 @@ const Landing = () => {
       </Box>
 
       {/* Skills Section */}
-      <Box id="skills" sx={{ order: 5, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="skills" className="content-section" sx={{ order: 5, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1769,7 +1770,7 @@ const Landing = () => {
       </Box>
 
       {/* Projects Section */}
-      <Box id="projects" sx={{ order: 3, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="projects" className="content-section" sx={{ order: 3, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2174,7 +2175,7 @@ const Landing = () => {
 
 
       {/* Contact Section */}
-      <Box id="contact" sx={{ order: 6, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="contact" className="content-section" sx={{ order: 6, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2435,7 +2436,7 @@ const Landing = () => {
       </Box>
 
       {/* Footer */}
-      <Box component="footer" sx={{ order: 7, background: '#080d18', borderTop: '1px solid rgba(148,163,184,0.18)', color: 'white' }}>
+      <Box component="footer" className="site-footer" sx={{ order: 7, background: '#080d18', borderTop: '1px solid rgba(148,163,184,0.18)', color: 'white' }}>
         <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 6 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 5, flexWrap: 'wrap' }}>
             <Box sx={{ maxWidth: 420 }}>
@@ -2445,9 +2446,6 @@ const Landing = () => {
               <Typography variant="body1" sx={{ color: '#94a3b8', lineHeight: 1.7, mb: 3 }}>
                 Freelance Full-Stack Engineer building SaaS products, web applications, platform services, and reliable digital experiences.
               </Typography>
-              <Button href="mailto:utkarshsri288@gmail.com?subject=Freelance%20Project%20Inquiry" startIcon={<EmailIcon />} variant="contained" sx={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white', '&:hover': { background: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)' } }}>
-                Start a conversation
-              </Button>
             </Box>
             <Box>
               <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Explore</Typography>

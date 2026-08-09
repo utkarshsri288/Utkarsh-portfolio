@@ -1,49 +1,387 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --bg: #070b14;
+  --bg-raised: #0b1220;
+  --surface: rgba(15, 23, 42, 0.76);
+  --surface-strong: rgba(17, 26, 46, 0.94);
+  --line: rgba(148, 163, 184, 0.14);
+  --line-strong: rgba(129, 140, 248, 0.34);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --primary: #818cf8;
+  --secondary: #22d3ee;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
 
 body {
   margin: 0;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  min-width: 320px;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(99, 102, 241, 0.11), transparent 27rem),
+    radial-gradient(circle at 92% 45%, rgba(34, 211, 238, 0.07), transparent 28rem),
+    var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection {
+  color: white;
+  background: rgba(99, 102, 241, 0.72);
 }
 
-/* Custom Animations */
+a {
+  color: inherit;
+}
+
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+}
+
+.portfolio-shell {
+  min-height: 100vh;
+  overflow: hidden;
+  background: transparent;
+}
+
+.hero-section,
+.content-section {
+  scroll-margin-top: 76px;
+}
+
+.hero-section {
+  padding-top: 76px !important;
+  background: var(--bg);
+}
+
+.hero-stage {
+  isolation: isolate;
+  min-height: calc(100vh - 76px) !important;
+  padding: clamp(5rem, 10vw, 8.5rem) 1.5rem !important;
+  background:
+    radial-gradient(circle at 16% 22%, rgba(99, 102, 241, 0.22), transparent 25rem),
+    radial-gradient(circle at 84% 72%, rgba(34, 211, 238, 0.13), transparent 24rem),
+    linear-gradient(145deg, #080d18 0%, #0b1221 52%, #09101d 100%) !important;
+}
+
+.hero-stage::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 86%);
+}
+
+.hero-stage > *:not(.hero-aurora) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-aurora {
+  z-index: -1;
+  opacity: 0.58;
+  filter: blur(18px);
+  animation: aurora 9s ease-in-out infinite alternate !important;
+}
+
+.hero-monogram {
+  width: 132px !important;
+  height: 132px !important;
+  margin-bottom: 2.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: 32px !important;
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #22d3ee 100%) !important;
+  box-shadow: 0 24px 70px rgba(99, 102, 241, 0.32) !important;
+}
+
+.hero-monogram .MuiTypography-root {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 3.35rem !important;
+  letter-spacing: -0.08em !important;
+}
+
+.hero-stage .hero-name {
+  max-width: 1000px;
+  margin-inline: auto;
+  font-size: clamp(3rem, 8vw, 6.6rem) !important;
+  line-height: 0.95;
+  letter-spacing: -0.065em !important;
+  text-shadow: none !important;
+}
+
+.hero-stage .MuiTypography-h3 {
+  color: #a5b4fc !important;
+  font-size: clamp(1rem, 2.3vw, 1.35rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.hero-stage .MuiTypography-h6 {
+  max-width: 780px !important;
+  margin-bottom: 3rem !important;
+  color: #aab8cc !important;
+  font-size: clamp(1rem, 1.8vw, 1.15rem) !important;
+  line-height: 1.8 !important;
+}
+
+.stats-section,
+.content-section {
+  position: relative;
+  padding-block: clamp(5rem, 9vw, 8rem) !important;
+  background: transparent !important;
+}
+
+.stats-section {
+  padding-block: 4.5rem !important;
+  border-block: 1px solid var(--line);
+  background: rgba(11, 18, 32, 0.68) !important;
+}
+
+#services,
+#about,
+#skills,
+#contact {
+  background: rgba(11, 18, 32, 0.56) !important;
+  border-block: 1px solid rgba(148, 163, 184, 0.07);
+}
+
+.content-section::before {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: min(90vw, 900px);
+  height: 300px;
+  content: '';
+  pointer-events: none;
+  transform: translateX(-50%);
+  opacity: 0.35;
+  background: radial-gradient(ellipse, rgba(99, 102, 241, 0.09), transparent 68%);
+}
+
+.content-section > div > .MuiBox-root,
+.stats-section > .MuiBox-root {
+  position: relative;
+  z-index: 1;
+}
+
+.content-section > div > .MuiBox-root > .MuiTypography-h3,
+.stats-section > .MuiBox-root > .MuiTypography-h3 {
+  margin-bottom: 3.5rem !important;
+  color: var(--text) !important;
+  font-size: clamp(2.15rem, 5vw, 3.5rem) !important;
+  line-height: 1.08;
+}
+
+.portfolio-shell .MuiCard-root {
+  overflow: hidden;
+  border: 1px solid var(--line) !important;
+  border-radius: 22px !important;
+  background: linear-gradient(145deg, rgba(18, 28, 49, 0.93), rgba(10, 17, 31, 0.9)) !important;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.18) !important;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+}
+
+.portfolio-shell .MuiCard-root:hover {
+  border-color: var(--line-strong) !important;
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.28) !important;
+}
+
+#services .MuiCard-root,
+#projects .MuiCard-root {
+  position: relative;
+}
+
+#services .MuiCard-root::before,
+#projects .MuiCard-root::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  content: '';
+  background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent);
+}
+
+.stats-section .MuiCard-root {
+  height: 180px !important;
+  min-height: 180px !important;
+  background: rgba(15, 23, 42, 0.66) !important;
+}
+
+.stats-section .MuiCard-root .MuiTypography-h3 {
+  margin-bottom: 0.35rem;
+  color: #a5b4fc !important;
+  font-size: 2.7rem !important;
+}
+
+.portfolio-shell .MuiChip-root {
+  height: 30px;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  border-radius: 9px !important;
+  color: #cbd5e1 !important;
+  background: rgba(148, 163, 184, 0.09) !important;
+  backdrop-filter: blur(10px);
+}
+
+.portfolio-shell .MuiButton-root {
+  min-height: 44px;
+  padding-inline: 1.25rem;
+  border-radius: 12px !important;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease !important;
+}
+
+.portfolio-shell .MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+.hero-stage .MuiButton-contained,
+#contact .MuiButton-contained {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, #6366f1, #7c3aed) !important;
+  box-shadow: 0 16px 38px rgba(99, 102, 241, 0.28) !important;
+}
+
+.portfolio-shell .MuiLinearProgress-root {
+  height: 6px !important;
+  border-radius: 999px !important;
+  background: rgba(148, 163, 184, 0.13) !important;
+}
+
+.portfolio-shell .MuiLinearProgress-bar {
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary)) !important;
+}
+
+#experience .MuiCard-root {
+  border-left: 3px solid rgba(129, 140, 248, 0.62) !important;
+}
+
+#contact .MuiCard-root {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.site-footer {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.11), transparent 23rem),
+    #060a12 !important;
+  border-top-color: var(--line) !important;
+}
+
+.site-footer .MuiButton-root {
+  min-height: auto;
+}
+
+.MuiFab-root {
+  right: 24px !important;
+  bottom: 24px !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: rgba(99, 102, 241, 0.9) !important;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(14px);
+}
+
+@keyframes aurora {
+  from {
+    opacity: 0.42;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
 @keyframes pulse {
-  0% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.72; }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.32); }
+  50% { box-shadow: 0 0 34px rgba(34, 211, 238, 0.42); }
+}
+
+@media (max-width: 899px) {
+  .hero-section {
+    padding-top: 68px !important;
   }
-  50% {
-    box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+
+  .hero-stage {
+    min-height: calc(100svh - 68px) !important;
+    padding-inline: 1.25rem !important;
+  }
+
+  .hero-monogram {
+    width: 104px !important;
+    height: 104px !important;
+    border-radius: 26px !important;
+  }
+
+  .hero-monogram .MuiTypography-root {
+    font-size: 2.65rem !important;
+  }
+
+  .content-section,
+  .stats-section {
+    padding-block: 4.5rem !important;
+  }
+
+  .portfolio-shell .MuiCard-root {
+    border-radius: 18px !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero-stage .hero-name {
+    font-size: clamp(2.65rem, 15vw, 4rem) !important;
+  }
+
+  .hero-stage .MuiButton-root {
+    width: min(100%, 320px);
+    padding-block: 0.85rem !important;
+  }
+
+  .content-section > div > .MuiBox-root,
+  .stats-section > .MuiBox-root {
+    padding-inline: 1rem !important;
+  }
+
+  .content-section .MuiCard-root {
+    padding: 1.25rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
