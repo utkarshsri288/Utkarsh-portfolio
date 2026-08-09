@@ -20,7 +20,8 @@ import {
   Web as WebIcon,
   KeyboardArrowUp as ArrowUpIcon,
   Build as BuildIcon,
-  School as EducationIcon
+  School as EducationIcon,
+  Launch as LaunchIcon
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import CustomGrid from '../components/CustomGrid';
@@ -36,7 +37,7 @@ const Landing = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       {/* Responsive Navigation */}
       <Navbar scrollToSection={scrollToSection} />
 
@@ -155,7 +156,7 @@ const Landing = () => {
                   color: '#94a3b8'
                 }}
               >
-                Freelance Frontend Developer & UI/UX Designer
+                SDE I · Freelance Full-Stack Engineer · UI/UX Designer
               </Typography>
             </motion.div>
 
@@ -176,8 +177,8 @@ const Landing = () => {
                   color: '#cbd5e1'
                 }}
               >
-                Available for freelance projects! I create clean, responsive, and scalable web applications. 
-                Specializing in React, TypeScript, and modern web technologies. Let's bring your ideas to life!
+                I build full-stack products, platform services, and polished web experiences. My work brings together 
+                frontend engineering, backend services, automation, cloud workflows, and thoughtful UI/UX to turn complex systems into clear experiences.
               </Typography>
             </motion.div>
 
@@ -279,9 +280,9 @@ const Landing = () => {
                     }
                   }}>
                     <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, color: 'white' }}>2+</Typography>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Years Experience</Typography>
+                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Years Building</Typography>
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                      Frontend Development & UI/UX Design
+                      Full-stack engineering & SaaS delivery
                     </Typography>
                   </Card>
                 </motion.div>
@@ -309,9 +310,9 @@ const Landing = () => {
                     }
                   }}>
                     <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, color: 'white' }}>10+</Typography>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Projects Completed</Typography>
+                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Enterprise Focus</Typography>
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                      Web Applications & Dashboards
+                      SaaS platforms & cloud dashboards
                     </Typography>
                   </Card>
                 </motion.div>
@@ -339,9 +340,9 @@ const Landing = () => {
                     }
                   }}>
                     <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, color: 'white' }}>15+</Typography>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Technologies</Typography>
+                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Languages & Tools</Typography>
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                      React, TypeScript, Figma & More
+                      React, Java, REST APIs, AWS & Git
                     </Typography>
                   </Card>
                 </motion.div>
@@ -369,9 +370,9 @@ const Landing = () => {
                     }
                   }}>
                     <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, color: 'white' }}>100%</Typography>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Responsive</Typography>
+                    <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>Community</Typography>
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                      Mobile-First Design
+                      2K+ LinkedIn followers
                     </Typography>
                   </Card>
                 </motion.div>
@@ -391,7 +392,7 @@ const Landing = () => {
         >
           <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
             <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
-              Freelance Services
+              Freelance Full-Stack Services
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -425,16 +426,17 @@ const Landing = () => {
                         <CodeIcon sx={{ fontSize: 40, color: 'white' }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Frontend Development
+                        Full-Stack Web Development
                       </Typography>
                     </Box>
                     <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
-                      Custom React applications, responsive websites, and interactive user interfaces built with modern technologies.
+                      End-to-end web applications with responsive interfaces, backend services, authentication, APIs, databases, and production-ready integrations.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
                       <Chip label="React.js" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                       <Chip label="TypeScript" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Material-UI" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="REST APIs" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Databases" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                     </Box>
                   </Card>
                 </motion.div>
@@ -467,16 +469,16 @@ const Landing = () => {
                         <BuildIcon sx={{ fontSize: 40, color: 'white' }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        UI/UX Design
+                        SaaS Tool Development
                       </Typography>
                     </Box>
                     <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
-                      User-centered design solutions, wireframes, prototypes, and design systems that enhance user experience.
+                      Build SaaS products from idea to deployment, including multi-page workflows, dashboards, admin panels, subscriptions, and internal tools.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                      <Chip label="Figma" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Prototyping" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="User Research" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="SaaS Platforms" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Admin Panels" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Cloud Workflows" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                     </Box>
                   </Card>
                 </motion.div>
@@ -509,19 +511,20 @@ const Landing = () => {
                         <WebIcon sx={{ fontSize: 40, color: 'white' }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Website Redesign
+                        Backend & API Engineering
                       </Typography>
                     </Box>
                     <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
-                      Modernize existing websites with responsive design, improved performance, and enhanced user experience.
+                      Design and connect reliable backend services, REST APIs, data workflows, release automation, report generation, and third-party integrations.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                      <Chip label="Responsive Design" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Performance" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="SEO" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Java" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="REST APIs" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Automation" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                     </Box>
                   </Card>
                 </motion.div>
+
               </Box>
 
               {/* Second Row - 2 Cards */}
@@ -554,16 +557,16 @@ const Landing = () => {
                         <StarIcon sx={{ fontSize: 40, color: 'white' }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Consultation
+                        EdTech & Business Tools
                       </Typography>
                     </Box>
                     <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
-                      Technical consultation for project planning, technology stack selection, and development strategy.
+                      Digital tools for education, fitness, operations, and business workflows—from learning experiences to reporting and management systems.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                      <Chip label="Tech Stack" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Architecture" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Best Practices" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="EdTech" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Business Workflows" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Custom Platforms" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                     </Box>
                   </Card>
                 </motion.div>
@@ -596,16 +599,44 @@ const Landing = () => {
                         <GitHubIcon sx={{ fontSize: 40, color: 'white' }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Maintenance & Support
+                        Testing, Deployment & Support
                       </Typography>
                     </Box>
                     <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
-                      Ongoing maintenance, bug fixes, updates, and technical support for your web applications.
+                      Improve reliability with unit testing, API testing, bug fixing, deployment support, monitoring, performance improvements, and long-term maintenance.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                      <Chip label="Bug Fixes" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Updates" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
-                      <Chip label="Support" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Unit Testing" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Deployment" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Monitoring" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                    </Box>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ height: '100%', p: 4, background: 'linear-gradient(135deg, #1f2937 0%, #374151 100%)', color: 'white', transition: 'all 0.3s ease-in-out', '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' } }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      <Box sx={{ backgroundColor: 'rgba(255,255,255,0.2)', borderRadius: 2, p: 2, mr: 2 }}>
+                        <WebIcon sx={{ fontSize: 40, color: 'white' }} />
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        Landing Pages & Static Websites
+                      </Typography>
+                    </Box>
+                    <Typography variant="body1" sx={{ mb: 3, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6 }}>
+                      High-converting landing pages, company websites, portfolio sites, and static marketing experiences with strong visual design and responsive performance.
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                      <Chip label="HTML/CSS" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="React.js" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="Figma Design" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
+                      <Chip label="SEO & Performance" size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white' }} />
                     </Box>
                   </Card>
                 </motion.div>
@@ -801,7 +832,7 @@ const Landing = () => {
       </Box>
 
       {/* Pricing Section */}
-      <Box id="pricing" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="pricing" sx={{ display: 'none' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1032,6 +1063,7 @@ const Landing = () => {
                   </Button>
                 </Card>
               </motion.div>
+
             </Box>
           </Box>
         </motion.div>
@@ -1068,14 +1100,14 @@ const Landing = () => {
                 Professional Summary
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
-                Freelance Frontend Developer with a strong focus on building clean, responsive, and scalable web applications. 
-                I specialize in React, TypeScript, and modern web technologies, helping businesses transform their digital presence 
-                with custom solutions that drive results.
+                Full-Stack Engineer with a strong focus on building clean, responsive, and scalable digital products. 
+                I work across frontend experiences, backend services, automation, cloud workflows, and UI/UX to help teams 
+                turn complex requirements into reliable products.
               </Typography>
               <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
                 With experience in both development and UI/UX design, I offer end-to-end solutions from concept to deployment. 
-                I've worked with startups and established companies, delivering projects that exceed expectations while maintaining 
-                clean, maintainable code and exceptional user experiences.
+                My work includes platform services, enterprise dashboards, control panels, report generation, release automation, 
+                and public-facing websites.
               </Typography>
               <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#e2e8f0' }}>
                 Available for new projects and ready to help you bring your ideas to life with professional, 
@@ -1206,13 +1238,38 @@ const Landing = () => {
                   </Box>
                 </Card>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                style={{ flex: '0 1 400px', maxWidth: '400px' }}
+              >
+                <Card sx={{ p: 4, height: '100%', background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)', color: 'white', transition: 'all 0.3s ease-in-out', '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 25px 50px rgba(79,70,229,0.35)' } }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                    <Box sx={{ backgroundColor: 'rgba(255,255,255,0.2)', borderRadius: 2, p: 1, mr: 2 }}>
+                      <StarIcon sx={{ fontSize: 40, color: 'white' }} />
+                    </Box>
+                    <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                      Recognition
+                    </Typography>
+                  </Box>
+                  <Typography variant="h6" sx={{ fontWeight: 700, color: 'white', mb: 2 }}>
+                    Developer Excellence Award
+                  </Typography>
+                  <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.88)', lineHeight: 1.7 }}>
+                    Recognized for technical contribution, ownership, problem-solving, and delivering reliable software products.
+                  </Typography>
+                </Card>
+              </motion.div>
             </Box>
           </Box>
         </motion.div>
       </Box>
 
       {/* Experience Section */}
-      <Box id="experience" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="experience" sx={{ order: 4, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1241,7 +1298,7 @@ const Landing = () => {
                           SDE I
                         </Typography>
                         <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, color: 'white' }}>
-                          IOPSHUB
+                          IOPSHUB · New Delhi
                         </Typography>
                       </Box>
                       <Chip label="Present" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
@@ -1250,20 +1307,20 @@ const Landing = () => {
                       April 1, 2025 – Present
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', mb: 3 }}>
-                      Tech Stack: React.js, TypeScript, AI integration tools
+                      Tech Stack: React.js, TypeScript, Django, Cypress, AWS, REST APIs
                     </Typography>
                     <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, color: 'white' }}>
-                      Leading front-end development of enterprise cloud optimization dashboards, 
-                      including modules for Cost Optimization, Inventory Management, EC2, EBS, EKS, S3, and Scheduling.
+                      Full-Stack Developer building scalable, user-centric digital products across the stack.
                     </Typography>
                     <Typography variant="body1" paragraph sx={{ lineHeight: 1.8, color: 'white' }}>
-                      Focused on building clean, modular, and scalable components using React.js with TypeScript, 
-                      ensuring intuitive and responsive user interfaces tailored for operational efficiency.
+                      At IOPSHub, I build React and TypeScript interfaces, Django backends, PSAUX, enterprise platform services, and Cypress test suites for reliable applications. Recognized with a Developer Excellence Award.
                     </Typography>
                     <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
                       <Chip label="React.js" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
                       <Chip label="TypeScript" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
-                      <Chip label="AI Integration" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                      <Chip label="Django" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                      <Chip label="Cypress" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                      <Chip label="REST APIs" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
                       <Chip label="Enterprise Dashboards" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
                       <Chip label="AWS Services" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
                     </Box>
@@ -1397,7 +1454,7 @@ const Landing = () => {
       </Box>
 
       {/* Skills Section */}
-      <Box id="skills" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="skills" sx={{ order: 5, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1432,7 +1489,7 @@ const Landing = () => {
                         <CodeIcon sx={{ fontSize: 40 }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Frontend Development
+                        Frontend Engineering
                       </Typography>
                     </Box>
                     
@@ -1460,14 +1517,14 @@ const Landing = () => {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>HTML5/CSS3</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>HTML & CSS</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>95%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={95} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Vite</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Strapi</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>80%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={80} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
@@ -1510,7 +1567,7 @@ const Landing = () => {
                         <BuildIcon sx={{ fontSize: 40 }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        UI/UX Design
+                        UED & Product Design
                       </Typography>
                     </Box>
                     
@@ -1524,35 +1581,35 @@ const Landing = () => {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Adobe XD</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>User Interface Design</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>75%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={75} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Prototyping</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>User Interface Prototyping</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>85%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={85} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Wireframing</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>User Experience (UX)</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>90%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={90} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Responsive Design</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Product Innovation</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>92%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={92} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>User Research</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Figma</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>80%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={80} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
@@ -1584,7 +1641,7 @@ const Landing = () => {
                         <GitHubIcon sx={{ fontSize: 40 }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Tools & Version Control
+                        Cloud, CI/CD & Messaging
                       </Typography>
                     </Box>
                     
@@ -1598,24 +1655,31 @@ const Landing = () => {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>GitHub</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Jenkins</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>88%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={88} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>VS Code</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>AWS CodeDeploy</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>90%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={90} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Chrome DevTools</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>AWS Auto Scaling</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>85%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={85} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
+                      </Box>
+                      <Box sx={{ mb: 2 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>RabbitMQ</Typography>
+                          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>80%</Typography>
+                        </Box>
+                        <LinearProgress variant="determinate" value={80} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                     </Box>
                   </Card>
@@ -1641,14 +1705,14 @@ const Landing = () => {
                         <WebIcon sx={{ fontSize: 40 }} />
                       </Box>
                       <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
-                        Programming Languages
+                        Backend, APIs & Testing
                       </Typography>
                     </Box>
                     
                     <Box sx={{ mb: 3 }}>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Java (OOPs)</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Python</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>85%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={85} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
@@ -1669,28 +1733,28 @@ const Landing = () => {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Axios</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Django REST Framework</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>82%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={82} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>React Hooks</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Cypress.io</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>88%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={88} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>React Router</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>End-to-end Testing</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>85%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={85} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                          <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Cypress test cases</Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, color: 'white' }}>Automated Software Testing</Typography>
                           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>80%</Typography>
                         </Box>
                         <LinearProgress variant="determinate" value={80} sx={{ height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.2)', '& .MuiLinearProgress-bar': { backgroundColor: 'white' } }} />
@@ -1705,7 +1769,7 @@ const Landing = () => {
       </Box>
 
       {/* Projects Section */}
-      <Box id="projects" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="projects" sx={{ order: 3, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1713,10 +1777,98 @@ const Landing = () => {
           viewport={{ once: true }}
         >
           <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3 }}>
-            <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 6, color: 'white' }}>
-              Projects & Portfolio
+                <Typography variant="h3" gutterBottom sx={{ fontWeight: 700, textAlign: 'center', mb: 2, color: 'white' }}>
+              Projects, Products & Portfolio
             </Typography>
-            
+            <Typography variant="body1" sx={{ textAlign: 'center', mb: 6, color: '#cbd5e1', maxWidth: 760, mx: 'auto', lineHeight: 1.7 }}>
+              From cloud platforms and internal services to public-facing websites, I design and build complete digital products across the stack.
+            </Typography>
+
+            {/* Live Websites */}
+            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', mb: 4 }}>
+              {[
+                {
+                  name: 'PSAUX.AI',
+                  type: 'Live SaaS Website',
+                  description: 'A cloud optimization platform combining AI-driven GRC, asset and inventory management, VAPT, and FinOps solutions.',
+                  url: 'https://www.psaux.ai/',
+                  technologies: ['React.js', 'TypeScript', 'AI Platform', 'Cloud Optimization']
+                },
+                {
+                  name: 'ACTIFYME',
+                  type: 'Live Product Website',
+                  description: 'A sports and wellness event management platform created to support activity, participation, and event experiences.',
+                  url: 'https://www.actifyme.fit/',
+                  technologies: ['Web Development', 'Responsive UI', 'Product Experience']
+                },
+                {
+                  name: 'IOPSHUB',
+                  type: 'Live Company Website',
+                  description: 'A cloud, DevOps, DevSecOps, InfoSec, data, modernization, and automation solutions website.',
+                  url: 'https://www.iopshub.com/',
+                  technologies: ['Cloud Solutions', 'DevOps', 'DevSecOps', 'Automation']
+                }
+              ].map((site, index) => (
+                <motion.div
+                  key={site.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                >
+                  <Card sx={{ height: '100%', background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)', color: 'white', '&:hover': { transform: 'translateY(-5px)', transition: 'transform 0.3s ease-in-out' } }}>
+                    <CardContent sx={{ p: 4 }}>
+                      <Chip label={site.type} size="small" sx={{ mb: 3, backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                      <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: 'white', mb: 2 }}>
+                        {site.name}
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.88)', mb: 3, lineHeight: 1.6 }}>
+                        {site.description}
+                      </Typography>
+                      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 3 }}>
+                        {site.technologies.map((technology) => (
+                          <Chip key={technology} label={technology} size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                        ))}
+                      </Box>
+                      <Button href={site.url} target="_blank" rel="noreferrer" endIcon={<LaunchIcon />} sx={{ color: 'white', borderColor: 'rgba(255,255,255,0.45)' }} variant="outlined">
+                        Visit live site
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </Box>
+
+            {/* Private SaaS Work */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+              <Card sx={{ maxWidth: 1100, width: '100%', background: 'linear-gradient(135deg, #172033 0%, #263449 100%)', color: 'white', border: '1px solid rgba(144,202,249,0.35)' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                  <Box sx={{ display: 'flex', alignItems: { xs: 'flex-start', md: 'center' }, justifyContent: 'space-between', gap: 2, flexWrap: 'wrap', mb: 2 }}>
+                    <Box>
+                      <Chip label="Private / NDA Protected" size="small" sx={{ mb: 2, backgroundColor: 'rgba(144,202,249,0.16)', color: '#90caf9', border: '1px solid rgba(144,202,249,0.35)' }} />
+                      <Typography variant="h5" sx={{ fontWeight: 600, color: 'white' }}>
+                        PRIVATE SAAS PRODUCTS
+                      </Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ color: '#90caf9', fontWeight: 600 }}>
+                      Selected work available on request
+                    </Typography>
+                  </Box>
+                  <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.82)', lineHeight: 1.7, mb: 3, maxWidth: 900 }}>
+                    Built and contributed to multiple private SaaS products and internal platforms, including release automation,
+                    report generation, control panels, enterprise dashboards, cloud operations workflows, and supporting backend services.
+                    Details can be shared privately where permitted.
+                  </Typography>
+                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                    {['SaaS Architecture', 'Frontend & Backend', 'REST APIs', 'Automation', 'Cloud Workflows', 'Admin Platforms'].map((skill) => (
+                      <Chip key={skill} label={skill} size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)' }} />
+                    ))}
+                  </Box>
+                </CardContent>
+              </Card>
+            </Box>
+
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               {/* First Row - 3 Cards */}
               <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -1839,6 +1991,59 @@ const Landing = () => {
                     </CardContent>
                   </Card>
                 </motion.div>
+              </Box>
+
+              {/* Platform Services - 3 Cards */}
+              <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap' }}>
+                {[
+                  {
+                    name: 'RELEASE AUTOMATION SERVICE',
+                    type: 'Platform Service',
+                    description: 'A service and interface for managing release workflows, deployment visibility, and repeatable delivery operations.',
+                    technologies: ['React.js', 'TypeScript', 'Automation', 'Cloud Platform']
+                  },
+                  {
+                    name: 'REPORT GENERATION SERVICE',
+                    type: 'Platform Service',
+                    description: 'A reporting workflow that turns operational data into structured, usable reports for teams and decision-makers.',
+                    technologies: ['React.js', 'TypeScript', 'Data Workflows', 'API Integration']
+                  },
+                  {
+                    name: 'CONTROL PANEL',
+                    type: 'Admin Platform',
+                    description: 'A centralized control panel for configuring platform capabilities, monitoring operations, and managing enterprise workflows.',
+                    technologies: ['React.js', 'TypeScript', 'Dashboard UI', 'Role-based Workflows']
+                  }
+                ].map((project, index) => (
+                  <motion.div
+                    key={project.name}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    style={{ flex: '0 1 350px', maxWidth: '350px' }}
+                  >
+                    <Card sx={{ height: '100%', background: 'linear-gradient(135deg, #334155 0%, #475569 100%)', color: 'white', '&:hover': { transform: 'translateY(-5px)', transition: 'transform 0.3s ease-in-out' } }}>
+                      <CardContent sx={{ p: 4 }}>
+                        <Chip label={project.type} size="small" sx={{ mb: 3, backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                        <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: 'white', mb: 2 }}>
+                          {project.name}
+                        </Typography>
+                        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', mb: 3, lineHeight: 1.6 }}>
+                          {project.description}
+                        </Typography>
+                        <Typography variant="body2" sx={{ fontWeight: 500, mb: 2, color: 'white' }}>
+                          Technologies:
+                        </Typography>
+                        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                          {project.technologies.map((technology) => (
+                            <Chip key={technology} label={technology} size="small" sx={{ backgroundColor: 'rgba(255,255,255,0.2)', color: 'white', border: '1px solid rgba(255,255,255,0.3)' }} />
+                          ))}
+                        </Box>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
               </Box>
 
               {/* Second Row - 3 Cards */}
@@ -1969,7 +2174,7 @@ const Landing = () => {
 
 
       {/* Contact Section */}
-      <Box id="contact" sx={{ py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
+      <Box id="contact" sx={{ order: 6, py: 8, background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)' }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2088,7 +2293,7 @@ const Landing = () => {
                           Location
                         </Typography>
                         <Typography variant="body2" sx={{ color: '#cbd5e1' }}>
-                          Greater Noida, India 201310
+                          New Delhi, India
                         </Typography>
                       </Box>
                     </Box>
@@ -2227,6 +2432,46 @@ const Landing = () => {
             </Box>
           </Box>
         </motion.div>
+      </Box>
+
+      {/* Footer */}
+      <Box component="footer" sx={{ order: 7, background: '#080d18', borderTop: '1px solid rgba(148,163,184,0.18)', color: 'white' }}>
+        <Box sx={{ maxWidth: 1200, mx: 'auto', px: 3, py: 6 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 5, flexWrap: 'wrap' }}>
+            <Box sx={{ maxWidth: 420 }}>
+              <Typography variant="h5" sx={{ fontWeight: 800, mb: 1 }}>
+                UTKARSH SRIVASTAV
+              </Typography>
+              <Typography variant="body1" sx={{ color: '#94a3b8', lineHeight: 1.7, mb: 3 }}>
+                Freelance Full-Stack Engineer building SaaS products, web applications, platform services, and reliable digital experiences.
+              </Typography>
+              <Button href="mailto:utkarshsri288@gmail.com?subject=Freelance%20Project%20Inquiry" startIcon={<EmailIcon />} variant="contained" sx={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white', '&:hover': { background: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)' } }}>
+                Start a conversation
+              </Button>
+            </Box>
+            <Box>
+              <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Explore</Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                {['About', 'Projects', 'Experience', 'Skills', 'Contact'].map((item) => (
+                  <Button key={item} href={`#${item.toLowerCase()}`} sx={{ justifyContent: 'flex-start', minWidth: 0, p: 0, color: '#94a3b8', '&:hover': { color: 'white', background: 'transparent' } }}>
+                    {item}
+                  </Button>
+                ))}
+              </Box>
+            </Box>
+            <Box>
+              <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Connect</Typography>
+              <Button href="https://linkedin.com/in/utkarshsri112/" target="_blank" rel="noreferrer" startIcon={<LinkedInIcon />} sx={{ color: '#94a3b8', p: 0, '&:hover': { color: 'white', background: 'transparent' } }}>
+                LinkedIn
+              </Button>
+              <Typography variant="body2" sx={{ color: '#64748b', mt: 2 }}>New Delhi, India</Typography>
+            </Box>
+          </Box>
+          <Box sx={{ mt: 5, pt: 3, borderTop: '1px solid rgba(148,163,184,0.12)', display: 'flex', justifyContent: 'space-between', gap: 2, flexWrap: 'wrap' }}>
+            <Typography variant="body2" sx={{ color: '#64748b' }}>© {new Date().getFullYear()} Utkarsh Srivastav. All rights reserved.</Typography>
+            <Typography variant="body2" sx={{ color: '#64748b' }}>Private SaaS work available on request.</Typography>
+          </Box>
+        </Box>
       </Box>
 
       {/* Scroll to Top Button */}

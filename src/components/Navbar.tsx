@@ -42,7 +42,6 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
     { label: 'Home', sectionId: 'home' },
     { label: 'Services', sectionId: 'services' },
     { label: 'Process', sectionId: 'process' },
-    { label: 'Pricing', sectionId: 'pricing' },
     { label: 'About', sectionId: 'about' },
     { label: 'Experience', sectionId: 'experience' },
     { label: 'Skills', sectionId: 'skills' },
@@ -103,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
                 textTransform: 'uppercase'
               }}
             >
-              Frontend Developer
+              Freelance Full-Stack Engineer
             </Typography>
           </Box>
         </Box>
@@ -207,7 +206,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection }) => {
                   textTransform: 'uppercase'
                 }}
               >
-                Frontend Developer
+                Freelance Full-Stack Engineer
               </Typography>
             </Box>
           </Box>
